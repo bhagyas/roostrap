@@ -25,6 +25,7 @@ Getting Started
  - `mvn tomcat:run`
 3. Run the Spring Roo shell at the root and continue with customizing the code.
  - `roo`
+ 
 Update History
 --------
 
