@@ -1,0 +1,19 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 13:25:10
+project --topLevelPackage com.intera.roostrap --projectName roostrap --java 6 --packaging JAR
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 13:25:21
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 13:26:08
+persistence setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE 
+entity jpa --class com.intera.roostrap.domain.City
+entity jpa --class com.intera.roostrap.domain.Country
+entity jpa --class com.intera.roostrap.domain.Person 
+field date --fieldName birthday --type java.util.Date
+web mvc setup
+web mvc all --package com.intera.roostrap.web 
+web mvc all --package com.intera.roostrap.web 
+focus --class ~.domain.City
+field reference --fieldName country --type ~.domain.Country --cardinality MANY_TO_ONE --notNull true
+web mvc all --package com.intera.roostrap.web 
+focus --class ~.domain.City
+field boolean --fieldName isActive
+focus --class ~.domain.Person
+field reference --type ~.domain.City --fieldName city --cardinality MANY_TO_ONE 
