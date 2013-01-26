@@ -13,4 +13,21 @@
             <!-- property name="hibernate.validator.autoregister_listeners" value="false" /-->
         </properties>
     </persistence-unit>
+<persistence-unit name="transactions-optional">
+        <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+        <properties>
+            <property name="datanucleus.NontransactionalRead" value="true"/>
+            <property name="datanucleus.NontransactionalWrite" value="true"/>
+            <property name="datanucleus.autoCreateSchema" value="false"/>
+            <property name="datanucleus.ConnectionURL" value="appengine"/>
+            <property name="datanucleus.ConnectionUserName" value=""/>
+            <property name="datanucleus.ConnectionPassword" value=""/>
+            <property name="datanucleus.autoCreateTables" value="true"/>
+            <property name="datanucleus.autoCreateColumns" value="false"/>
+            <property name="datanucleus.autoCreateConstraints" value="false"/>
+            <property name="datanucleus.validateTables" value="false"/>
+            <property name="datanucleus.validateConstraints" value="false"/>
+            <property name="datanucleus.jpa.addClassTransformer" value="false"/>
+        </properties>
+    </persistence-unit>
 </persistence>

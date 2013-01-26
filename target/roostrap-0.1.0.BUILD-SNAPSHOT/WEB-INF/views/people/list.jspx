@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_intera_roostrap_domain_Person" items="${people}" z="iu4lKhn4ooJAb603iR2+AUrZIM8=">
+        <table:table data="${people}" id="l_com_intera_roostrap_domain_Person" path="/people" z="NV/DUrglTVbYIT3mscROMdM0REc=">
+            <table:column date="true" dateTimePattern="${person_birthday_date_format}" id="c_com_intera_roostrap_domain_Person_birthday" property="birthday" z="fz1GMUthDQYM1o7n3ksMPljQJqU="/>
+            <table:column id="c_com_intera_roostrap_domain_Person_name" property="name" z="6AfSHm1KxIBsQRK/dGL20iJLzpY="/>
+            <table:column id="c_com_intera_roostrap_domain_Person_city" property="city" z="aXzeC4cEyiaWr8PJAsbQVxhj7uc="/>
+        </table:table>
+    </page:list>
+</div>
