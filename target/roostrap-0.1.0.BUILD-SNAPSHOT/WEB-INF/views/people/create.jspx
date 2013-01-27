@@ -3,9 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_intera_roostrap_domain_Person" modelAttribute="person" path="/people" render="${empty dependencies}" z="Ogx8cZQSF0HqOu9zninAPWCWIcY=">
-        <field:datetime dateTimePattern="${person_birthday_date_format}" field="birthday" id="c_com_intera_roostrap_domain_Person_birthday" z="Vih3jIsoJB5tCp8xdwcd5s69Vd0="/>
         <field:input field="name" id="c_com_intera_roostrap_domain_Person_name" z="Hysp+XVoD1tgmFxq4NYAy88RR7o="/>
-        <field:select field="city" id="c_com_intera_roostrap_domain_Person_city" itemValue="id" items="${citys}" path="/citys" z="AVhAY/NHuxAwdhawKQLBSZR1NtE="/>
+        <field:datetime dateTimePattern="${person_birthday_date_format}" field="birthday" id="c_com_intera_roostrap_domain_Person_birthday" z="Vih3jIsoJB5tCp8xdwcd5s69Vd0="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_intera_roostrap_domain_Person" render="${not empty dependencies}" z="db5cF868Q4LZjuAx3qAsJjaPKqo="/>
 </div>

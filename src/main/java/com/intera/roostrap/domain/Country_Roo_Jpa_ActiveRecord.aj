@@ -7,6 +7,7 @@ import com.intera.roostrap.domain.Country;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect Country_Roo_Jpa_ActiveRecord {
@@ -20,24 +21,28 @@ privileged aspect Country_Roo_Jpa_ActiveRecord {
         return em;
     }
     
+    @Transactional
     public static long Country.countCountrys() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM Country o", Long.class).getSingleResult();
+        return findAllCountrys().size();
     }
     
+    @Transactional
     public static List<Country> Country.findAllCountrys() {
         return entityManager().createQuery("SELECT o FROM Country o", Country.class).getResultList();
     }
     
-    public static Country Country.findCountry(Long id) {
-        if (id == null) return null;
+    @Transactional
+    public static Country Country.findCountry(String id) {
+        if (id == null || id.length() == 0) return null;
         return entityManager().find(Country.class, id);
     }
     
+    @Transactional
     public static List<Country> Country.findCountryEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM Country o", Country.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void Country.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);

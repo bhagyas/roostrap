@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_intera_roostrap_domain_City" modelAttribute="city" path="/citys" versionField="Version" z="TSak/nd0quP0zx7n3tySsG8Q4UI=">
         <field:input field="name" id="c_com_intera_roostrap_domain_City_name" z="GAQVJ4puf/vSjIMNOmcnF+qKHQo="/>
-        <field:select field="country" id="c_com_intera_roostrap_domain_City_country" itemValue="id" items="${countrys}" path="/countrys" required="true" z="lVWdnWkzwTOLQNZCgQ/CJO93pJs="/>
         <field:checkbox field="isActive" id="c_com_intera_roostrap_domain_City_isActive" z="VLXluTxdxbMvpbkBtBrzbrhuj+U="/>
+        <field:select field="country" id="c_com_intera_roostrap_domain_City_country" itemValue="id" items="${countrys}" path="/countrys" z="9jzz0CPi6JZVQzAQs8AfpjdPnW4="/>
     </form:update>
 </div>

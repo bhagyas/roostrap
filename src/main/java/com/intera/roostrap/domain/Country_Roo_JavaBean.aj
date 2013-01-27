@@ -3,7 +3,9 @@
 
 package com.intera.roostrap.domain;
 
+import com.intera.roostrap.domain.City;
 import com.intera.roostrap.domain.Country;
+import java.util.Set;
 
 privileged aspect Country_Roo_JavaBean {
     
@@ -13,6 +15,30 @@ privileged aspect Country_Roo_JavaBean {
     
     public void Country.setName(String name) {
         this.name = name;
+    }
+    
+    public boolean Country.isIsActive() {
+        return this.isActive;
+    }
+    
+    public void Country.setIsActive(boolean isActive) {
+        this.isActive = isActive;
+    }
+    
+    public String Country.getDescription() {
+        return this.description;
+    }
+    
+    public void Country.setDescription(String description) {
+        this.description = description;
+    }
+    
+    public Set<City> Country.getCities() {
+        return this.cities;
+    }
+    
+    public void Country.setCities(Set<City> cities) {
+        this.cities = cities;
     }
     
 }

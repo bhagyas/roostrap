@@ -10,33 +10,35 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Version;
+import org.datanucleus.api.jpa.annotations.Extension;
 
 privileged aspect Person_Roo_Jpa_Entity {
     
     declare @type: Person: @Entity;
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Extension(vendorName = "datanucleus", key = "gae.encoded-pk", value = "true")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long Person.id;
+    private String Person.id;
     
     @Version
     @Column(name = "version")
-    private Integer Person.version;
+    private Long Person.version;
     
-    public Long Person.getId() {
+    public String Person.getId() {
         return this.id;
     }
     
-    public void Person.setId(Long id) {
+    public void Person.setId(String id) {
         this.id = id;
     }
     
-    public Integer Person.getVersion() {
+    public Long Person.getVersion() {
         return this.version;
     }
     
-    public void Person.setVersion(Integer version) {
+    public void Person.setVersion(Long version) {
         this.version = version;
     }
     

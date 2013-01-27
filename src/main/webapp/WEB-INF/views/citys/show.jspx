@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_intera_roostrap_domain_City" object="${city}" path="/citys" z="gEWmPUC1g0ab5f5W2LurQIgBuCo=">
         <field:display field="name" id="s_com_intera_roostrap_domain_City_name" object="${city}" z="5PyCFfbBXRBdg4kkFMiIMm07+3Y="/>
-        <field:display field="country" id="s_com_intera_roostrap_domain_City_country" object="${city}" z="HaFAiBcDo5CG+nL3X4pMHLLH87o="/>
         <field:display field="isActive" id="s_com_intera_roostrap_domain_City_isActive" object="${city}" z="XqMmZaq7LlSAiwVsdBdTWDW+HOc="/>
+        <field:display field="country" id="s_com_intera_roostrap_domain_City_country" object="${city}" z="HaFAiBcDo5CG+nL3X4pMHLLH87o="/>
     </page:show>
 </div>

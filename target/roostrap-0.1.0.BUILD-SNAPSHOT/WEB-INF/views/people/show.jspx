@@ -3,8 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_intera_roostrap_domain_Person" object="${person}" path="/people" z="KSgY6mpRZK6NHioapl2WYfyD/5U=">
-        <field:display date="true" dateTimePattern="${person_birthday_date_format}" field="birthday" id="s_com_intera_roostrap_domain_Person_birthday" object="${person}" z="miPbaxgs8NXYUShDBC85Zt5j3EY="/>
         <field:display field="name" id="s_com_intera_roostrap_domain_Person_name" object="${person}" z="vWl1flZ8Dx5oywKzWk1hG9ZAUQE="/>
-        <field:display field="city" id="s_com_intera_roostrap_domain_Person_city" object="${person}" z="kONhDnqrawqfnikAjs7IsFCu1Ow="/>
+        <field:display date="true" dateTimePattern="${person_birthday_date_format}" field="birthday" id="s_com_intera_roostrap_domain_Person_birthday" object="${person}" z="miPbaxgs8NXYUShDBC85Zt5j3EY="/>
     </page:show>
 </div>

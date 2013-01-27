@@ -31,16 +31,18 @@
     </c:set>
 
     <script type="text/javascript">dojo.require("dijit.form.SimpleTextarea");</script>
+    <dl class="dl-horizontal">
     <div id="_${fn:escapeXml(id)}_id">
       <label for="_${sec_field}_id">
-        <c:out value="${fn:escapeXml(label)}" />
-        :
+        <dt><c:out value="${fn:escapeXml(label)}" />
+        :</dt>
       </label>
-      <form:textarea id="_${sec_field}_id" path="${sec_field}" disabled="${disabled}" />
+      <dd><form:textarea id="_${sec_field}_id" path="${sec_field}" disabled="${disabled}" /></dd>
       <br />
       <form:errors cssClass="errors" id="_${sec_field}_error_id" path="${sec_field}" />
       <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_${sec_field}_id', widgetType : 'dijit.form.SimpleTextarea', widgetAttrs : {disabled : ${disabled}}})); </script>
     </div>
+    </dl>
     <br />
 
   </c:if>

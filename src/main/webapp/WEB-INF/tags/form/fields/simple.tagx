@@ -16,20 +16,20 @@
       <spring:message code="label_${fn:toLowerCase(fn:substringAfter(id,'_'))}" var="label" htmlEscape="false" />
     </c:if>
 
-    <div id="_${fn:escapeXml(id)}_id">
+    <dl class="dl-horizontal"><div id="_${fn:escapeXml(id)}_id">
       <label for="_${fn:escapeXml(field)}_id">
-        <c:out value="${label}" />
-        :
+        <dt><c:out value="${label}" />
+        :</dt>
       </label>
       <c:choose>
         <c:when test="${not empty messageCode}">
           <spring:message code="${messageCode}" arguments="${messageCodeAttribute}" />
         </c:when>
         <c:otherwise>
-          <spring:eval expression="text" />
+          <dd><spring:eval expression="text" /></dd>
         </c:otherwise>
       </c:choose>
-    </div>
+    </div></dl>
     <br />
   </c:if>
 </jsp:root>
