@@ -3,7 +3,6 @@
 
 package com.intera.roostrap.domain;
 
-import com.intera.roostrap.domain.City;
 import com.intera.roostrap.domain.Person;
 import java.util.Date;
 
@@ -23,14 +22,6 @@ privileged aspect Person_Roo_JavaBean {
     
     public void Person.setBirthday(Date birthday) {
         this.birthday = birthday;
-    }
-    
-    public City Person.getCity() {
-        return this.city;
-    }
-    
-    public void Person.setCity(City city) {
-        this.city = city;
     }
     
 }

@@ -7,6 +7,7 @@ import com.intera.roostrap.domain.City;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect City_Roo_Jpa_ActiveRecord {
@@ -20,24 +21,28 @@ privileged aspect City_Roo_Jpa_ActiveRecord {
         return em;
     }
     
+    @Transactional
     public static long City.countCitys() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM City o", Long.class).getSingleResult();
+        return findAllCitys().size();
     }
     
+    @Transactional
     public static List<City> City.findAllCitys() {
         return entityManager().createQuery("SELECT o FROM City o", City.class).getResultList();
     }
     
-    public static City City.findCity(Long id) {
-        if (id == null) return null;
+    @Transactional
+    public static City City.findCity(String id) {
+        if (id == null || id.length() == 0) return null;
         return entityManager().find(City.class, id);
     }
     
+    @Transactional
     public static List<City> City.findCityEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM City o", City.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void City.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);

@@ -16,20 +16,20 @@ privileged aspect City_Roo_JavaBean {
         this.name = name;
     }
     
+    public boolean City.isIsActive() {
+        return this.isActive;
+    }
+    
+    public void City.setIsActive(boolean isActive) {
+        this.isActive = isActive;
+    }
+    
     public Country City.getCountry() {
         return this.country;
     }
     
     public void City.setCountry(Country country) {
         this.country = country;
-    }
-    
-    public Boolean City.getIsActive() {
-        return this.isActive;
-    }
-    
-    public void City.setIsActive(Boolean isActive) {
-        this.isActive = isActive;
     }
     
 }
