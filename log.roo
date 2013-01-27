@@ -18,3 +18,19 @@ field boolean --fieldName isActive
 focus --class ~.domain.Person
 field reference --type ~.domain.City --fieldName city --cardinality MANY_TO_ONE 
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 23:25:55
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-26 16:11:08
+web mvc all --package com.intera.roostrap.web
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-26 17:02:01
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-26 17:15:37
+focus --class ~.domain.City
+field reference --type ~.domain.Country --fieldName country 
+entity jpa --class ~.domain.City --identifierType java.lang.String --versionType java.lang.Long
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-27 14:26:56
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-27 14:27:06
+focus --class ~.domain.Country
+field string --fieldName description --sizeMax 500
+focus --class ~.domain.City 
+field reference --fieldName country --type ~.domain.Country
+field reference --fieldName country --type ~.domain.Country --fetch LAZY 
+focus --class ~.domain.Country
+field set --fieldName cities --type ~.domain.City --mappedBy country --cardinality ONE_TO_MANY 

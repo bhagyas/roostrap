@@ -7,8 +7,6 @@ import com.intera.roostrap.domain.City;
 import com.intera.roostrap.domain.Country;
 import com.intera.roostrap.web.CityController;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.ui.Model;
@@ -36,16 +34,11 @@ privileged aspect CityController_Roo_Controller {
     @RequestMapping(params = "form", produces = "text/html")
     public String CityController.createForm(Model uiModel) {
         populateEditForm(uiModel, new City());
-        List<String[]> dependencies = new ArrayList<String[]>();
-        if (Country.countCountrys() == 0) {
-            dependencies.add(new String[] { "country", "countrys" });
-        }
-        uiModel.addAttribute("dependencies", dependencies);
         return "citys/create";
     }
     
     @RequestMapping(value = "/{id}", produces = "text/html")
-    public String CityController.show(@PathVariable("id") Long id, Model uiModel) {
+    public String CityController.show(@PathVariable("id") String id, Model uiModel) {
         uiModel.addAttribute("city", City.findCity(id));
         uiModel.addAttribute("itemId", id);
         return "citys/show";
@@ -77,13 +70,13 @@ privileged aspect CityController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
-    public String CityController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+    public String CityController.updateForm(@PathVariable("id") String id, Model uiModel) {
         populateEditForm(uiModel, City.findCity(id));
         return "citys/update";
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
-    public String CityController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String CityController.delete(@PathVariable("id") String id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         City city = City.findCity(id);
         city.remove();
         uiModel.asMap().clear();

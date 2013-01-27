@@ -1,21 +1,23 @@
 package com.intera.roostrap.domain;
 
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
+@RooJpaActiveRecord(identifierType = String.class, versionType = Long.class)
 public class City {
 
+	@NotNull
     private String name;
 
-    @NotNull
-    @ManyToOne
-    private Country country;
+    private boolean isActive;
 
-    private Boolean isActive;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Country country;
 }

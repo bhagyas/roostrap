@@ -7,6 +7,7 @@ import com.intera.roostrap.domain.Person;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect Person_Roo_Jpa_ActiveRecord {
@@ -20,24 +21,28 @@ privileged aspect Person_Roo_Jpa_ActiveRecord {
         return em;
     }
     
+    @Transactional
     public static long Person.countPeople() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM Person o", Long.class).getSingleResult();
+        return findAllPeople().size();
     }
     
+    @Transactional
     public static List<Person> Person.findAllPeople() {
         return entityManager().createQuery("SELECT o FROM Person o", Person.class).getResultList();
     }
     
-    public static Person Person.findPerson(Long id) {
-        if (id == null) return null;
+    @Transactional
+    public static Person Person.findPerson(String id) {
+        if (id == null || id.length() == 0) return null;
         return entityManager().find(Person.class, id);
     }
     
+    @Transactional
     public static List<Person> Person.findPersonEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM Person o", Person.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void Person.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);
