@@ -65,7 +65,6 @@ Update History
  - Added support for Google AppEngine Java SDK - 1.7.4 (Latest)
  - Added `maven-gae-plugin-repo` repository to `pom.xml`
  - Added `maven-gae-plugin` as a plugin to `pom.xml`
- - For more information on entity mapping on AppEngine please refer to [https://developers.google.com/appengine/docs/java/datastore/jdo/relationships#Unowned_Relationships]
  
 **25 January 2013**
  - RooStrap updated to Spring Roo 1.2.3 and the following updated to the latest generally available (GA) versions: 
