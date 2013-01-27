@@ -57,6 +57,9 @@ eg: You can change your persistence layer to Hibernate and a HYPERSONIC PERSISTE
 Update History
 --------
 
+**27 January 2013**
+ - RooStrap demo running on Google AppEngine now available on http://roostrap.appspot.com
+
 **26 January 2013**
  - Added support for Google AppEngine and a demonstration branch.
  - Added support for Google AppEngine Java SDK - 1.7.4 (Latest)
