@@ -56,6 +56,8 @@ eg: You can change your persistence layer to Hibernate and a HYPERSONIC PERSISTE
 
 Update History
 --------
+**22 March 2013**
+ - Minor stylesheet order changes
 
 **27 January 2013**
  - RooStrap demo running on Google AppEngine now available on http://roostrap.appspot.com
