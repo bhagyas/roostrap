@@ -11,21 +11,25 @@
   <spring:url value="/resources/images/favicon.ico" var="favicon" />
   <link rel="stylesheet" type="text/css" href="${tundra_url}" />
   <link rel="SHORTCUT ICON" href="${favicon}" />
-  
+
+  <!-- JQuery url -->
+  <spring:url value="/resources/js/bootstrap.js" var="bootstrap_js_url" />
+  <script src="${jquery_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+
   <spring:url value="/resources/css/bootstrap.css" var="bootstrap_css_url" />
   <link rel="stylesheet" type="text/css" href="${bootstrap_css_url}" />
-  <link rel="stylesheet" type="text/css" media="screen" href="${roo_css_url}" />
-  
-  <!-- JQuery url -->
-  <spring:url value="/resources/js/jquery.js" var="bootstrap_jquery_url" />
-  <script src="${bootstrap_jquery_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
-  
-  <spring:url value="/resources/js/bootstrap.js" var="bootstrap_js_url" />
-  <script src="${bootstrap_js_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
-  
-  
 
-  
+  <spring:url value="/resources/select2/select2.css" var="select2_css_url" />
+  <link rel="stylesheet" type="text/css" href="${select2_css_url}" />
+
+  <spring:url value="/resources/js-lib/jquery-1.9.0.min.js" var="jquery_js_url" />
+  <script src="${jquery_js_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+
+  <spring:url value="/resources/select2/select2.min.js" var="select2_js_url" />
+  <script src="${select2_js_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="${roo_css_url}" />
+
   <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
   <c:set var="userLocale">
     <c:set var="plocale">${pageContext.response.locale}</c:set>

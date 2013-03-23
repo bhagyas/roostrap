@@ -32,7 +32,7 @@
     <c:if test="${empty multiple}">
       <c:set value="false" var="multiple" />
     </c:if>
-    
+
     <c:set var="sec_field">
       <spring:escapeBody javaScriptEscape="true" >${field}</spring:escapeBody>
     </c:set>
@@ -40,7 +40,7 @@
     <c:set var="sec_itemLabel">
       <spring:escapeBody htmlEscape="true" >${itemLabel}</spring:escapeBody>
     </c:set>
-	<dl class="dl-horizontal"> 
+	<dl class="dl-horizontal">
     <div id="_${fn:escapeXml(id)}_id">
       <c:choose>
         <c:when test="${not empty items}">
@@ -192,8 +192,9 @@
           <c:choose>
             <c:when test="${multiple == false}">
               <script type="text/javascript">
+              $("#_${sec_field}_id").width("215px")
               $("#_${sec_field}_id").select2();
-              //Spring.addDecoration(new Spring.ElementDecoration({elementId : '_${sec_field}_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); 
+              //Spring.addDecoration(new Spring.ElementDecoration({elementId : '_${sec_field}_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}}));
               </script>
             </c:when>
             <!-- disabled due to http://jira.springframework.org/browse/ROO-909 <c:otherwise> <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_${field}_id', widgetType: 'dijit.form.MultiSelect', widgetAttrs : {}})); </script> </c:otherwise> -->
