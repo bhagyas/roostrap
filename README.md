@@ -53,6 +53,10 @@ Since RooStrap is configured to use Google AppEngine, you need to change your pe
 eg: You can change your persistence layer to Hibernate and a HYPERSONIC PERSISTENT database by running the following Roo command.
 `persistence setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE `
 
+If you are running on Hypersonic and Hibernate, you have to change the following annotations in your entity definitions.
+
+`@RooJpaActiveRecord(identifierType = String.class, versionType = Long.class)` to `@RooJpaActiveRecord`
+
 
 Update History
 --------
