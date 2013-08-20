@@ -60,6 +60,10 @@ If you are running on Hypersonic and Hibernate, you have to change the following
 
 Update History
 --------
+**20 August 2013**
+ - Woah, it's been a great year for roostrap with people around the world using it.
+ - Added support for bootstrap 3 (released 19 August 2013) 
+ 
 **22 March 2013**
  - Minor stylesheet order changes
 

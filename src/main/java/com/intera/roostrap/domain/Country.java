@@ -26,7 +26,7 @@ public class Country {
     @Size(max = 500)
     private String description;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
+    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "country")
     private Set<City> cities = new HashSet<City>();
     
     @Override

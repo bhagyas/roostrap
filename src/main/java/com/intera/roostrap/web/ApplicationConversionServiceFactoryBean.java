@@ -22,7 +22,11 @@ public class ApplicationConversionServiceFactoryBean extends FormattingConversio
     public Converter<Country, String> getCountryToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.intera.roostrap.domain.Country, java.lang.String>() {
             public String convert(Country country) {
-                return new StringBuilder().append(country.getName()).append(" - ").append(country.getDescription()).toString();
+            	if(country.getDescription() != null && !country.getDescription().isEmpty()){
+            		return new StringBuilder().append(country.getName()).append(" - ").append(country.getDescription()).toString();
+             	}else{
+            		return new StringBuilder().append(country.getName()).toString();
+             	}
             }
         };
     }

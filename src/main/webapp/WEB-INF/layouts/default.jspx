@@ -31,8 +31,9 @@
 		   				
 		   			</div>
 		   			
-		   			<div class="col-md-9">
-		   				<div id="main" class="">
+		   			<div class="col-md-9 panel panel-default">
+		   				<div id="main" class="panel-body">
+		   					
 		   					<tiles:insertAttribute name="body"/> 
 					    </div>
 		   			</div>
