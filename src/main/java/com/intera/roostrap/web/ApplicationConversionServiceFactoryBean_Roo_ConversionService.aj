@@ -23,34 +23,18 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Long, City> ApplicationConversionServiceFactoryBean.getIdToCityConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.intera.roostrap.domain.City>() {
-            public com.intera.roostrap.domain.City convert(java.lang.Long id) {
+    public Converter<String, City> ApplicationConversionServiceFactoryBean.getIdToCityConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.intera.roostrap.domain.City>() {
+            public com.intera.roostrap.domain.City convert(java.lang.String id) {
                 return City.findCity(id);
             }
         };
     }
     
-    public Converter<String, City> ApplicationConversionServiceFactoryBean.getStringToCityConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.intera.roostrap.domain.City>() {
-            public com.intera.roostrap.domain.City convert(String id) {
-                return getObject().convert(getObject().convert(id, Long.class), City.class);
-            }
-        };
-    }
-    
-    public Converter<Long, Country> ApplicationConversionServiceFactoryBean.getIdToCountryConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.intera.roostrap.domain.Country>() {
-            public com.intera.roostrap.domain.Country convert(java.lang.Long id) {
-                return Country.findCountry(id);
-            }
-        };
-    }
-    
-    public Converter<String, Country> ApplicationConversionServiceFactoryBean.getStringToCountryConverter() {
+    public Converter<String, Country> ApplicationConversionServiceFactoryBean.getIdToCountryConverter() {
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.intera.roostrap.domain.Country>() {
-            public com.intera.roostrap.domain.Country convert(String id) {
-                return getObject().convert(getObject().convert(id, Long.class), Country.class);
+            public com.intera.roostrap.domain.Country convert(java.lang.String id) {
+                return Country.findCountry(id);
             }
         };
     }
@@ -63,18 +47,10 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Long, Person> ApplicationConversionServiceFactoryBean.getIdToPersonConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.intera.roostrap.domain.Person>() {
-            public com.intera.roostrap.domain.Person convert(java.lang.Long id) {
-                return Person.findPerson(id);
-            }
-        };
-    }
-    
-    public Converter<String, Person> ApplicationConversionServiceFactoryBean.getStringToPersonConverter() {
+    public Converter<String, Person> ApplicationConversionServiceFactoryBean.getIdToPersonConverter() {
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.intera.roostrap.domain.Person>() {
-            public com.intera.roostrap.domain.Person convert(String id) {
-                return getObject().convert(getObject().convert(id, Long.class), Person.class);
+            public com.intera.roostrap.domain.Person convert(java.lang.String id) {
+                return Person.findPerson(id);
             }
         };
     }
@@ -82,13 +58,10 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getCityToStringConverter());
         registry.addConverter(getIdToCityConverter());
-        registry.addConverter(getStringToCityConverter());
         registry.addConverter(getCountryToStringConverter());
         registry.addConverter(getIdToCountryConverter());
-        registry.addConverter(getStringToCountryConverter());
         registry.addConverter(getPersonToStringConverter());
         registry.addConverter(getIdToPersonConverter());
-        registry.addConverter(getStringToPersonConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

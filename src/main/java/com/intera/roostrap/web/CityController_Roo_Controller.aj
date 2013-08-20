@@ -38,7 +38,7 @@ privileged aspect CityController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{id}", produces = "text/html")
-    public String CityController.show(@PathVariable("id") Long id, Model uiModel) {
+    public String CityController.show(@PathVariable("id") String id, Model uiModel) {
         uiModel.addAttribute("city", City.findCity(id));
         uiModel.addAttribute("itemId", id);
         return "citys/show";
@@ -70,13 +70,13 @@ privileged aspect CityController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
-    public String CityController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+    public String CityController.updateForm(@PathVariable("id") String id, Model uiModel) {
         populateEditForm(uiModel, City.findCity(id));
         return "citys/update";
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
-    public String CityController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String CityController.delete(@PathVariable("id") String id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         City city = City.findCity(id);
         city.remove();
         uiModel.asMap().clear();

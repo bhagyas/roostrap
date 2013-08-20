@@ -14,8 +14,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-//@RooJpaActiveRecord(identifierType = String.class, versionType = Long.class)
-@RooJpaActiveRecord
+@RooJpaActiveRecord(identifierType = String.class, versionType = Long.class) //gae
+//@RooJpaActiveRecord //tomcat
 public class Country {
 
 	@NotNull

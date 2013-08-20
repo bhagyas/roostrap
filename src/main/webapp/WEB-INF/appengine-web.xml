@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <application>roostrap</application>
+    <version>2</version><!-- v2 is bootstrap 3 -->
+    <sessions-enabled>true</sessions-enabled>
+    <threadsafe>true</threadsafe>
+    <!-- Configure java.util.logging -->
+    <system-properties>
+        <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+        <property name="appengine.orm.disable.duplicate.emf.exception" value="false"/>
+    </system-properties>
+</appengine-web-app>
