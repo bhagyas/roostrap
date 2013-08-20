@@ -22,7 +22,7 @@ Getting Started
 1. Clone the project from github or download and extract.
  - `git clone https://github.com/bhagyas/roostrap.git`
 2. Run the following command on your command prompt/terminal/shell.
- - `mvn tomcat:run`
+ - `mvn gae:run`
 3. Run the Spring Roo shell at the root and continue with customizing the code.
  - `roo`
 

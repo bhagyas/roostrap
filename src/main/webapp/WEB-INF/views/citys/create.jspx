@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_intera_roostrap_domain_City" modelAttribute="city" path="/citys" render="${empty dependencies}" z="Stesm2yjJdo6hvFhyLh4YTWSZBM=">
-        <field:input field="name" id="c_com_intera_roostrap_domain_City_name" z="GAQVJ4puf/vSjIMNOmcnF+qKHQo="/>
+        <field:input field="name" id="c_com_intera_roostrap_domain_City_name" required="true" z="L89ysoqnELplN/FpETa3/UX5pNM="/>
         <field:checkbox field="isActive" id="c_com_intera_roostrap_domain_City_isActive" z="VLXluTxdxbMvpbkBtBrzbrhuj+U="/>
         <field:select field="country" id="c_com_intera_roostrap_domain_City_country" itemValue="id" items="${countrys}" path="/countrys" z="9jzz0CPi6JZVQzAQs8AfpjdPnW4="/>
     </form:create>

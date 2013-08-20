@@ -17,13 +17,13 @@
     </c:if>
 
     <dl class="dl-horizontal"><div id="_${fn:escapeXml(id)}_id">
-      <label for="_${fn:escapeXml(field)}_id">
-        <dt><c:out value="${label}" />
-        :</dt>
-      </label>
+      <dt><label for="_${fn:escapeXml(field)}_id">
+        <c:out value="${label}" />
+        :
+      </label></dt>
       <c:choose>
         <c:when test="${not empty messageCode}">
-          <spring:message code="${messageCode}" arguments="${messageCodeAttribute}" />
+          <dd><spring:message code="${messageCode}" arguments="${messageCodeAttribute}" /></dd>
         </c:when>
         <c:otherwise>
           <dd><spring:eval expression="text" /></dd>

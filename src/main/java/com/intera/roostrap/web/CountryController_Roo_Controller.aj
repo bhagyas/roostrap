@@ -38,7 +38,7 @@ privileged aspect CountryController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{id}", produces = "text/html")
-    public String CountryController.show(@PathVariable("id") String id, Model uiModel) {
+    public String CountryController.show(@PathVariable("id") Long id, Model uiModel) {
         uiModel.addAttribute("country", Country.findCountry(id));
         uiModel.addAttribute("itemId", id);
         return "countrys/show";
@@ -70,13 +70,13 @@ privileged aspect CountryController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
-    public String CountryController.updateForm(@PathVariable("id") String id, Model uiModel) {
+    public String CountryController.updateForm(@PathVariable("id") Long id, Model uiModel) {
         populateEditForm(uiModel, Country.findCountry(id));
         return "countrys/update";
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
-    public String CountryController.delete(@PathVariable("id") String id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String CountryController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Country country = Country.findCountry(id);
         country.remove();
         uiModel.asMap().clear();

@@ -34,13 +34,13 @@
 
     <script type="text/javascript">dojo.require('dijit.form.DateTextBox')</script>
    <dl class="dl-horizontal"> <div id="_${sec_id}_id">
-    
+    <dt>
       <label for="_${sec_field}_id">
-    	<dt>
+    	
     	<c:out value="${label}" />
         :
-        </dt>
-      </label>
+        </label>
+      </dt>
       <c:choose>
         <c:when test="${disableFormBinding}">
           <dd>

@@ -10,7 +10,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(identifierType = String.class, versionType = Long.class)
+//@RooJpaActiveRecord(identifierType = String.class, versionType = Long.class)
+@RooJpaActiveRecord
 public class City {
 
 	@NotNull

@@ -22,14 +22,14 @@
 
 	<dl class="dl-horizontal">
     <div id="_${fn:escapeXml(id)}_id">
-      <label for="_${fn:escapeXml(field)}_id">
-      <dt>
+      <dt><label for="_${fn:escapeXml(field)}_id">
+      
       
         <c:out value="${label}" />
         :
      
-      </dt>
-       </label>
+      
+       </label></dt>
       <dd>
       
         <c:choose>

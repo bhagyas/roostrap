@@ -4,7 +4,7 @@
   <spring:message var="app_name" code="application_name" htmlEscape="false" />
   <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
 
-	<div class="hero-unit" title="${title}">
+	<div class="jumbotron" title="${title}">
 		<h1>
 			<spring:message code="welcome_h3" arguments="${app_name}" />
 		</h1>
