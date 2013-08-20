@@ -12,9 +12,11 @@
   <link rel="stylesheet" type="text/css" href="${tundra_url}" />
   <link rel="SHORTCUT ICON" href="${favicon}" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
   <!-- JQuery url -->
   <spring:url value="/resources/css/bootstrap.css" var="bootstrap_css_url" />
-  <link rel="stylesheet" type="text/css" href="${bootstrap_css_url}" />
+  <link rel="stylesheet" type="text/css" href="${bootstrap_css_url}"  media="screen" />
 
   <spring:url value="/resources/select2/select2.css" var="select2_css_url" />
   <link rel="stylesheet" type="text/css" href="${select2_css_url}" />

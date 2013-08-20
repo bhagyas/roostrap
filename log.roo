@@ -34,3 +34,9 @@ field reference --fieldName country --type ~.domain.Country
 field reference --fieldName country --type ~.domain.Country --fetch LAZY 
 focus --class ~.domain.Country
 field set --fieldName cities --type ~.domain.City --mappedBy country --cardinality ONE_TO_MANY 
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-08-20 05:07:58
+persistence setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE 
+persistence setup --database GOOGLE_APP_ENGINE --provider DATANUCLEUS 
+web mvc all --package com.intera.roostrap.web
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-08-20 07:19:19
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-08-20 07:19:39

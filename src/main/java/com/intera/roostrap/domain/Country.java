@@ -14,7 +14,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(identifierType = String.class, versionType = Long.class)
+@RooJpaActiveRecord(identifierType = String.class, versionType = Long.class) //gae
+//@RooJpaActiveRecord //tomcat
 public class Country {
 
 	@NotNull
@@ -25,9 +26,10 @@ public class Country {
     @Size(max = 500)
     private String description;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
+    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "country")
     private Set<City> cities = new HashSet<City>();
     
+    @Override
     public String toString(){
     	return this.name;
     }

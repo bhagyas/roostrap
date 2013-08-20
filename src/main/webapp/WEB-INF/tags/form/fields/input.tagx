@@ -57,13 +57,14 @@
     
     <dl class="dl-horizontal">
     <div id="_${fn:escapeXml(id)}_id">
-      <label for="_${sec_field}_id">
-      	<dt>
-        <c:out value="${fn:escapeXml(label)}" />
+      <dt>
+        <label for="_${sec_field}_id">
+      	<c:out value="${fn:escapeXml(label)}" />
         :
-        </dt>
+
       </label>
-      <dd>
+        </dt>
+              <dd>
       	<div class="controls">
       		<c:choose>
 	        <c:when test="${disableFormBinding}">

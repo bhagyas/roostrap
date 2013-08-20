@@ -22,7 +22,7 @@ Getting Started
 1. Clone the project from github or download and extract.
  - `git clone https://github.com/bhagyas/roostrap.git`
 2. Run the following command on your command prompt/terminal/shell.
- - `mvn tomcat:run`
+ - `mvn gae:run`
 3. Run the Spring Roo shell at the root and continue with customizing the code.
  - `roo`
 
@@ -38,7 +38,7 @@ Deploying on Google AppEngine
 5. Follow the instructions along the Maven plugin.
 6. Visit `http://xyz.appspot.com` to view your application running!
 
-Running the local development server with Google AppEngine
+Running the local development server with Google AppEngine (default)
 ----------
 
 1. Run the following command in the project root.
@@ -60,6 +60,12 @@ If you are running on Hypersonic and Hibernate, you have to change the following
 
 Update History
 --------
+**20 August 2013**
+ - Added support for Bootstrap 3 (released 19 August 2013) 
+ - With support for Bootstrap 3, now Roostrap is fully supported on mobile devices with a completely responsive layout.
+ - RooStrap updated to Spring Roo 1.2.4
+ - Notes: Woah, thanks for the amazing responses it's been a great year for Roostrap!
+ 
 **22 March 2013**
  - Minor stylesheet order changes
 
