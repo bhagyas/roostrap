@@ -17,10 +17,10 @@
 
 	<dl class="dl-horizontal">
     <div id="_${fn:escapeXml(id)}_id">
-      <label for="_${fn:escapeXml(field)}_id">
-        <dt><c:out value="${fn:escapeXml(label)}" />
-        :</dt>
-      </label>
+      <dt><label for="_${fn:escapeXml(field)}_id">
+        <c:out value="${fn:escapeXml(label)}" />
+        :
+      </label></dt>
       <spring:url value="${path}" var="create_url">
         <spring:param name="form" />
       </spring:url>
@@ -29,14 +29,14 @@
         <spring:url value="/resources/images/add.png" var="create_img_url" />
         <spring:message arguments="${field}" code="global_menu_new" var="add_message" htmlEscape="false" />
         <img alt="${fn:escapeXml(add_message)}" src="${create_img_url}" title="${fn:escapeXml(add_message)}" />
-      </a></dd>
+      </a>
       <c:out value=" " />
       <spring:message arguments="${label}" code="entity_not_found" />
       <c:if test="${not empty required and required eq 'true'}">
         (
         <spring:message code="field_required" />
         )
-      </c:if>
+      </c:if></dd>
     </div>
     </dl>
     <br />

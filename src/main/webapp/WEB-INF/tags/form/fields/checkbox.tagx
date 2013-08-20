@@ -18,9 +18,9 @@
    
     <script type="text/javascript">dojo.require("dijit.form.CheckBox");</script>
      <dl class="dl-horizontal"><div id="_${sec_id}_id">
-      <label for="_${sec_field}_id">
-        <dt><c:out value="${fn:escapeXml(label)}" />:</dt>
-      </label>
+      <dt><label for="_${sec_field}_id">
+        <c:out value="${fn:escapeXml(label)}" />:
+      </label></dt>
       <c:choose>
         <c:when test="${disableFormBinding}">
           <dd><input id="_${sec_field}_id" name="${sec_field}" type="checkbox"/></dd>

@@ -31,14 +31,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Country, String> ApplicationConversionServiceFactoryBean.getCountryToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.intera.roostrap.domain.Country, java.lang.String>() {
-            public String convert(Country country) {
-                return new StringBuilder().append(country.getName()).append(' ').append(country.getDescription()).toString();
-            }
-        };
-    }
-    
     public Converter<String, Country> ApplicationConversionServiceFactoryBean.getIdToCountryConverter() {
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.intera.roostrap.domain.Country>() {
             public com.intera.roostrap.domain.Country convert(java.lang.String id) {
