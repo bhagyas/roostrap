@@ -10,9 +10,9 @@
 		<aspectj.version>1.7.0</aspectj.version>
 		<java.version>6</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<roo.version>1.2.4.RELEASE</roo.version>
+		<roo.version>1.2.5.RELEASE</roo.version>
 		<slf4j.version>1.7.2</slf4j.version>
-		<spring.version>3.2.0.RELEASE</spring.version>
+		<spring.version>3.2.6.RELEASE</spring.version>
 		<appengine.sdk.version>1.8.8</appengine.sdk.version>
 		<gae.home>${user.home}/.m2/repository/com/google/appengine/appengine-java-sdk/${appengine.sdk.version}/appengine-java-sdk-${appengine.sdk.version}</gae.home>
 	</properties>
