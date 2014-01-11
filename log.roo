@@ -40,3 +40,16 @@ persistence setup --database GOOGLE_APP_ENGINE --provider DATANUCLEUS
 web mvc all --package com.intera.roostrap.web
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-08-20 07:19:19
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-08-20 07:19:39
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-10 16:57:14
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-10 18:39:27
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-10 18:39:50
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-10 18:42:14
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-01-10 18:43:10
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-01-10 22:08:01
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-01-11 07:52:11
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-01-11 07:56:28
+finder list --class ~.domain.City
+finder list --class ~.domain.City
+finder add --finderName findCitiesByCountry --class ~.domain.City
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-01-11 08:04:45
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-01-11 08:14:45

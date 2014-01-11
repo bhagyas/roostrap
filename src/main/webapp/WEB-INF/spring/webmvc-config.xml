@@ -12,7 +12,8 @@
     
 
     <!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources -->
-    <mvc:resources location="/, classpath:/META-INF/web-resources/" mapping="/resources/**"/>
+    <!-- cache period set to 0 for fixing a bug when running locally with AppEngine SDK -->
+    <mvc:resources location="/, classpath:/META-INF/web-resources/" mapping="/resources/**" cache-period="0"/>
 
     <!-- Allows for mapping the DispatcherServlet to "/" by forwarding static resource 
     requests to the container's default Servlet -->

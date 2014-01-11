@@ -60,6 +60,13 @@ If you are running on Hypersonic and Hibernate, you have to change the following
 
 Update History
 --------
+**11 January 2014**
+ - Refactored the code base and major version updates to libraries.
+ - Updated Google AppEngine SDK version to 1.8.8 (released 19 November 2013)
+ - Updated to Bootstrap v3.0.3 
+ - Updated to Spring Roo version 1.2.5 and Spring version to 3.2.6 (latest GA)
+ 
+ 
 **20 August 2013**
  - Added support for Bootstrap 3 (released 19 August 2013) 
  - With support for Bootstrap 3, now Roostrap is fully supported on mobile devices with a completely responsive layout.

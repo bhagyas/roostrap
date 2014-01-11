@@ -15,6 +15,8 @@ privileged aspect Country_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Country.entityManager;
     
+    public static final List<String> Country.fieldNames4OrderClauseFilter = java.util.Arrays.asList("name", "isActive", "description", "cities");
+    
     public static final EntityManager Country.entityManager() {
         EntityManager em = new Country().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -22,13 +24,25 @@ privileged aspect Country_Roo_Jpa_ActiveRecord {
     }
     
     @Transactional
-    public static long Country.countCountrys() {
-        return findAllCountrys().size();
+    public static long Country.countCountries() {
+        return findAllCountries().size();
     }
     
     @Transactional
-    public static List<Country> Country.findAllCountrys() {
+    public static List<Country> Country.findAllCountries() {
         return entityManager().createQuery("SELECT o FROM Country o", Country.class).getResultList();
+    }
+    
+    @Transactional
+    public static List<Country> Country.findAllCountries(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Country o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, Country.class).getResultList();
     }
     
     @Transactional
@@ -42,21 +56,22 @@ privileged aspect Country_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Country o", Country.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
+    @Transactional
+    public static List<Country> Country.findCountryEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Country o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, Country.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void Country.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);
-    }
-    
-    @Transactional
-    public void Country.remove() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        if (this.entityManager.contains(this)) {
-            this.entityManager.remove(this);
-        } else {
-            Country attached = Country.findCountry(this.id);
-            this.entityManager.remove(attached);
-        }
     }
     
     @Transactional
