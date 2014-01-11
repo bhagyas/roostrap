@@ -4,7 +4,7 @@
 	<groupId>com.intera.roostrap</groupId>
 	<artifactId>roostrap</artifactId>
 	<packaging>war</packaging>
-	<version>0.1.1.BUILD-SNAPSHOT</version>
+	<version>0.1.2.BUILD-SNAPSHOT</version>
 	<name>roostrap</name>
 	<properties>
 		<aspectj.version>1.7.4</aspectj.version>
