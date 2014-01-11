@@ -562,9 +562,9 @@
 											<goal>unpack</goal>
 										</goals>
 									</pluginExecutionFilter>
-									<action>
+								<!-- 	<action>
 										<ignore></ignore>
-									</action>
+									</action> -->
 								</pluginExecution>
 							</pluginExecutions>
 						</lifecycleMappingMetadata>

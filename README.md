@@ -22,7 +22,7 @@ Getting Started
 1. Clone the project from github or download and extract.
  - `git clone https://github.com/bhagyas/roostrap.git`
 2. Run the following command on your command prompt/terminal/shell.
- - `mvn gae:run`
+ - `mvn appengine:devserver`
 3. Run the Spring Roo shell at the root and continue with customizing the code.
  - `roo`
 
@@ -34,7 +34,7 @@ Deploying on Google AppEngine
 3. Change the application identifier `<application/>` in the `src/main/WEB-INF/appengine-web.xml` to the created application identifier.
  - `<application>xyz</application>`
 4. Run the following command in your shell.
- - `mvn gae:deploy`
+ - `mvn appengine:update`
 5. Follow the instructions along the Maven plugin.
 6. Visit `http://xyz.appspot.com` to view your application running!
 
@@ -42,7 +42,7 @@ Running the local development server with Google AppEngine (default)
 ----------
 
 1. Run the following command in the project root.
-- `mvn gae:run`
+- `mvn appengine:devserver`
 
 
 Running in Tomcat
@@ -65,7 +65,8 @@ Update History
  - Updated Google AppEngine SDK version to 1.8.8 (released 19 November 2013)
  - Updated to Bootstrap v3.0.3 
  - Updated to Spring Roo version 1.2.5 and Spring version to 3.2.6 (latest GA)
- 
+ - Added official Google AppEngine Maven plugin
+ - Roostrap celebrates 3 years of continuous updates!
  
 **20 August 2013**
  - Added support for Bootstrap 3 (released 19 August 2013) 
