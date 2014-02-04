@@ -53,3 +53,4 @@ finder list --class ~.domain.City
 finder add --finderName findCitiesByCountry --class ~.domain.City
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-01-11 08:04:45
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-01-11 08:14:45
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-01-11 16:19:22
