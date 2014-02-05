@@ -25,10 +25,10 @@
         <spring:param name="form" />
       </spring:url>
       
-      <dd><a href="${create_url}">
-        <spring:url value="/resources/images/add.png" var="create_img_url" />
-        <spring:message arguments="${field}" code="global_menu_new" var="add_message" htmlEscape="false" />
-        <img alt="${fn:escapeXml(add_message)}" src="${create_img_url}" title="${fn:escapeXml(add_message)}" />
+      <dd>
+      <spring:message arguments="${field}" code="global_menu_new" var="add_message" htmlEscape="false" />
+      <a href="${create_url}" alt="${fn:escapeXml(add_message)}" title="${fn:escapeXml(add_message)}" class="btn btn-xs btn-success">
+        <span class="glyphicon glyphicon-plus"></span>
       </a>
       <c:out value=" " />
       <spring:message arguments="${label}" code="entity_not_found" />
