@@ -1,4 +1,4 @@
-roostrap
+roostrap 
 ========
 
 > Twitter Bootstrap Integrated Skin and User Interface Framework for Spring Roo 
@@ -10,6 +10,10 @@ Visit http://about.me/bhagyas
 <3
 
 Cheers.
+
+Build Status
+------------
+[![Build Status](https://travis-ci.org/bhagyas/roostrap.png?branch=master)](https://travis-ci.org/bhagyas/roostrap)
 
 Requirements
 ------------
