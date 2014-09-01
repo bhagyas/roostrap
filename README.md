@@ -1,4 +1,4 @@
-roostrap
+roostrap 
 ========
 
 > Twitter Bootstrap Integrated Skin and User Interface Framework for Spring Roo 
@@ -10,6 +10,10 @@ Visit http://about.me/bhagyas
 <3
 
 Cheers.
+
+Build Status
+------------
+[![Build Status](https://travis-ci.org/bhagyas/roostrap.png?branch=master)](https://travis-ci.org/bhagyas/roostrap)
 
 Requirements
 ------------
@@ -60,6 +64,9 @@ If you are running on Hypersonic and Hibernate, you have to change the following
 
 Update History
 --------
+**8 May 2014**
+ - Updated Google AppEngine SDK version to 1.9.3 (released 28 April 2014)
+
 **11 January 2014**
  - Refactored the code base and major version updates to libraries.
  - Updated Google AppEngine SDK version to 1.8.8 (released 19 November 2013)

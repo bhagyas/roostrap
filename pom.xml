@@ -13,7 +13,7 @@
 		<roo.version>1.2.5.RELEASE</roo.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<spring.version>3.2.6.RELEASE</spring.version>
-		<appengine.sdk.version>1.8.8</appengine.sdk.version>
+		<appengine.sdk.version>1.9.3</appengine.sdk.version>
 		<gae.home>${user.home}/.m2/repository/com/google/appengine/appengine-java-sdk/${appengine.sdk.version}/appengine-java-sdk-${appengine.sdk.version}</gae.home>
 	</properties>
 	<repositories>
