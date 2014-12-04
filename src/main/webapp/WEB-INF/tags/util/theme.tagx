@@ -31,6 +31,21 @@
       </spring:url>
       <spring:message code="global_theme_alt" var="theme_alt" htmlEscape="false" />
       <a href="${url_theme2}" title="${fn:escapeXml(theme_alt)}">${fn:escapeXml(theme_alt)}</a>
+   
+     <c:out value=" | " />
+      <spring:url var="url_theme3" value="">
+        <spring:param name="theme" value="roostrap" />
+        <c:if test="${not empty param.page}">
+          <spring:param name="page" value="${param.page}" />
+        </c:if>
+        <c:if test="${not empty param.size}">
+          <spring:param name="size" value="${param.size}" />
+        </c:if>
+      </spring:url>
+      <spring:message code="global_theme_roostrap" var="theme_roostrap" htmlEscape="false" />
+      <a href="${url_theme3}" title="${fn:escapeXml(theme_roostrap)}">${fn:escapeXml(theme_roostrap)}</a>
+      
+   
     </span>
   </c:if>
 </jsp:root>

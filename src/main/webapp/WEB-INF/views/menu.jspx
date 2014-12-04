@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" class="well sidebar-nav" id="menu" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
@@ -8,12 +8,12 @@
             <menu:item id="i_person_list" messageCode="global_menu_list" url="/people?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MFjeqYeiMgVzk2P/OWfFpXZhhS4="/>
         </menu:category>
         <menu:category id="c_city" z="4hVKAkWoLVM4Da06LymSga9Sizg=">
-            <menu:item id="i_city_new" messageCode="global_menu_new" url="/cities?form" z="ALvexInNJV04umr0v6O5Lb5BiXI="/>
-            <menu:item id="i_city_list" messageCode="global_menu_list" url="/cities?page=1&amp;size=${empty param.size ? 10 : param.size}" z="eCMIDEtkupGCPUtv6TKBGfxsOaQ="/>
+            <menu:item id="i_city_new" messageCode="global_menu_new" url="/cities?form" z="user-managed"/>
+            <menu:item id="i_city_list" messageCode="global_menu_list" url="/cities?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
         </menu:category>
         <menu:category id="c_country" z="+9IFFFqXHr5bWdYjx7upDibmQfo=">
-            <menu:item id="i_country_new" messageCode="global_menu_new" url="/countries?form" z="w/t3ndIFG1oOXQSnQA37LDCwCVQ="/>
-            <menu:item id="i_country_list" messageCode="global_menu_list" url="/countries?page=1&amp;size=${empty param.size ? 10 : param.size}" z="405hB7IPjKe3kdsCS/CvenUbx3I="/>
+            <menu:item id="i_country_new" messageCode="global_menu_new" url="/countries?form" z="user-managed"/>
+            <menu:item id="i_country_list" messageCode="global_menu_list" url="/countries?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
         </menu:category>
     </menu:menu>
 </div>

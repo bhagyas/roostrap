@@ -38,7 +38,7 @@
     <spring:message var="typeNamePlural" code="menu_item_${fn:toLowerCase(fn:split(id,'_')[fn:length(fn:split(id,'_')) - 1])}_list_label" htmlEscape="false" />
 
     <spring:message arguments="${label}" code="entity_show" var="title_msg" htmlEscape="false" />
-    <util:panel id="${id}" title="${title_msg}" openPane="${openPane}">
+	<legend>${title_msg}</legend>
       <c:choose>
         <c:when test="${not empty object}">
           <jsp:doBody />
@@ -54,7 +54,7 @@
                       <spring:message code="entity_delete_confirm" />
                     </spring:escapeBody>
                   </c:set>
-                  <input alt="${fn:escapeXml(delete_label)}" class="image" src="${delete_image_url}" title="${fn:escapeXml(delete_label)}" type="image" value="${fn:escapeXml(delete_label)}" onclick="return confirm('${fn:escapeXml(delete_confirm_msg)}');" />
+                  <input alt="${fn:escapeXml(delete_label)}" class="image btn btn-danger" src="${delete_image_url}" title="${fn:escapeXml(delete_label)}" type="image" value="${fn:escapeXml(delete_label)}" onclick="return confirm('${fn:escapeXml(delete_confirm_msg)}');" />
                 </form:form>
               </c:if>
             </span>
@@ -66,7 +66,7 @@
                 <spring:url value="/resources/images/update.png" var="update_image_url" />
                 <spring:message arguments="${typeName}" code="entity_update" var="update_label" htmlEscape="false" />
                 <a href="${update_form_url}" alt="${fn:escapeXml(update_label)}" title="${fn:escapeXml(update_label)}">
-                  <img alt="${fn:escapeXml(update_label)}" class="image" src="${update_image_url}" title="${fn:escapeXml(update_label)}" />
+                  <img alt="${fn:escapeXml(update_label)}" class="image btn btn-warning" src="${update_image_url}" title="${fn:escapeXml(update_label)}" />
                 </a>
               </c:if>
             </span>
@@ -78,7 +78,7 @@
                 <spring:url value="/resources/images/create.png" var="create_image_url" />
                 <spring:message arguments="${typeName}" code="entity_create" var="create_label" htmlEscape="false" />
                 <a href="${create_form_url}" alt="${fn:escapeXml(create_label)}" title="${fn:escapeXml(create_label)}">
-                  <img alt="${fn:escapeXml(create_label)}" class="image" src="${create_image_url}" title="${fn:escapeXml(create_label)}" />
+                  <img alt="${fn:escapeXml(create_label)}" class="image btn btn-success" src="${create_image_url}" title="${fn:escapeXml(create_label)}" />
                 </a>
               </c:if>
             </span>
@@ -88,7 +88,7 @@
                 <spring:url value="/resources/images/list.png" var="list_image_url" />
                 <spring:message arguments="${typeNamePlural}" code="entity_list_all" var="list_label" htmlEscape="false" />
                 <a href="${list_form_url}" alt="${fn:escapeXml(list_label)}" title="${fn:escapeXml(list_label)}">
-                  <img alt="${fn:escapeXml(list_label)}" class="image" src="${list_image_url}" title="${fn:escapeXml(list_label)}" />
+                  <img alt="${fn:escapeXml(list_label)}" class="image btn btn-info" src="${list_image_url}" title="${fn:escapeXml(list_label)}" />
                 </a>
               </c:if>
             </span>
@@ -98,6 +98,5 @@
           <spring:message arguments="${label}" code="entity_not_found_single" />
         </c:otherwise>
       </c:choose>
-    </util:panel>
   </c:if>
 </jsp:root>

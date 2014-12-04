@@ -44,7 +44,7 @@
     
     <spring:eval var="colCounter" expression="1" />
 
-    <table>
+    <table class="table table-striped table-hover table-condensed table-bordered">
       <thead>
         <tr>
           <c:forTokens items="${columnLabels}" delims="${'&#9999;'}" var="columnHeading" varStatus="num">
@@ -137,7 +137,7 @@
             <spring:url value="/resources/images/show.png" var="show_image_url" />
             <spring:message arguments="${typeName}" code="entity_show" var="show_label" htmlEscape="false" />
             <a href="${show_form_url}" alt="${fn:escapeXml(show_label)}" title="${fn:escapeXml(show_label)}">
-              <img alt="${fn:escapeXml(show_label)}" class="image" src="${show_image_url}" title="${fn:escapeXml(show_label)}" />
+              <img alt="${fn:escapeXml(show_label)}" class="btn btn-info" src="${show_image_url}" title="${fn:escapeXml(show_label)}" />
             </a>
           </td>
           <c:if test="${update}">
@@ -148,7 +148,7 @@
               <spring:url value="/resources/images/update.png" var="update_image_url" />
               <spring:message arguments="${typeName}" code="entity_update" var="update_label" htmlEscape="false" />
               <a href="${update_form_url}" alt="${fn:escapeXml(update_label)}" title="${fn:escapeXml(update_label)}">
-                <img alt="${fn:escapeXml(update_label)}" class="image" src="${update_image_url}" title="${fn:escapeXml(update_label)}" />
+                <img alt="${fn:escapeXml(update_label)}" class="image btn btn-warning" src="${update_image_url}" title="${fn:escapeXml(update_label)}" />
               </a>
             </td>
           </c:if>
@@ -163,7 +163,7 @@
                     <spring:message code="entity_delete_confirm" />
                   </spring:escapeBody>
                 </c:set>
-                <input alt="${fn:escapeXml(delete_label)}" class="image" src="${delete_image_url}" title="${fn:escapeXml(delete_label)}" type="image" value="${fn:escapeXml(delete_label)}" onclick="return confirm('${delete_confirm_msg}');" />
+                <input alt="${fn:escapeXml(delete_label)}" class="btn btn-danger" src="${delete_image_url}" title="${fn:escapeXml(delete_label)}" type="image" value="${fn:escapeXml(delete_label)}" onclick="return confirm('${delete_confirm_msg}');" />
                 <c:if test="${not empty param.page}">
                   <input name="page" type="hidden" value="1" />
                 </c:if>
@@ -185,7 +185,7 @@
               <a href="${create_url}">
                 <spring:url value="/resources/images/add.png" var="create_img_url" />
                 <spring:message arguments="${typeName}" code="global_menu_new" var="add_message" htmlEscape="false" />
-                <img alt="${fn:escapeXml(add_message)}" src="${create_img_url}" title="${fn:escapeXml(add_message)}" />
+                <img alt="${fn:escapeXml(add_message)}" class="btn btn-success" src="${create_img_url}" title="${fn:escapeXml(add_message)}" />
               </a>
             </span>
             <c:out value=" " />

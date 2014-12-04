@@ -17,7 +17,8 @@
       <spring:message code="label_${fn:toLowerCase(fn:substringAfter(id,'_'))}_plural" var="labelPlural" htmlEscape="false" />
     </c:if>
     <spring:message arguments="${labelPlural}" code="entity_list_all" var="title_msg" htmlEscape="false" />
-    <util:panel id="${id}" title="${title_msg}" openPane="${openPane}">
+    
+      <legend>${title_msg}</legend>
       <c:choose>
         <c:when test="${not empty items}">
           <jsp:doBody />
@@ -26,6 +27,6 @@
           <spring:message arguments="${label}" code="entity_not_found" />
         </c:otherwise>
       </c:choose>
-    </util:panel>
+      
   </c:if>
 </jsp:root>

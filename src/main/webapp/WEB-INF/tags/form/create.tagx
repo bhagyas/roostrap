@@ -20,7 +20,7 @@
       <c:set var="enctype" value="multipart/form-data"/>
     </c:if>
     <spring:message arguments="${label}" code="entity_create" var="title_msg" htmlEscape="false" />
-    <util:panel id="${id}" title="${title_msg}" openPane="${openPane}">
+      <legend>${title_msg}</legend>
       <spring:url value="${path}" var="form_url"/>
       <c:set var="jsCall" value=""/>
       <c:if test="${not empty compositePkField}">
@@ -53,9 +53,9 @@
         <div class="submit" id="${fn:escapeXml(id)}_submit">
           <spring:message code="button_save" var="save_button" htmlEscape="false" />
           <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>
-          <input id="proceed" type="submit" value="${fn:escapeXml(save_button)}"/>
+          <input id="proceed" type="submit" class="btn btn-primary" value="${fn:escapeXml(save_button)}"/>
         </div>
       </form:form>
-    </util:panel>
+      
   </c:if>
 </jsp:root>

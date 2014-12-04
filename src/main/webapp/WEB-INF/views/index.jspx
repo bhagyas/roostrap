@@ -3,12 +3,22 @@
   <jsp:output omit-xml-declaration="yes" />
   <spring:message var="app_name" code="application_name" htmlEscape="false" />
   <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
-  <util:panel id="title" title="${title}">
-    <h3>
-      <spring:message code="welcome_h3" arguments="${app_name}" />
-    </h3>
-    <p>
-      <spring:message code="welcome_text" />
-    </p>
-  </util:panel>
+
+	<div class="" title="${title}">
+		<h1>
+			<spring:message code="welcome_h3" arguments="${app_name}" />
+		</h1>
+		<p>
+			<spring:message code="welcome_text_roostrap" />
+		</p>
+		
+		<br/>
+		
+		<hr/>
+		<blockquote class="pull-right">
+		  <p><spring:message code="welcome_quote" /></p>
+		  <small><spring:message code="welcome_quote_author" /></small>
+		</blockquote>
+	</div>
+
 </div>

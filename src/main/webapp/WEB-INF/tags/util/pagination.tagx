@@ -36,10 +36,10 @@
     <c:forEach var="i" begin="5" end="25" step="5">
       <c:choose>
         <c:when test="${size == i}">
-          <c:out value="${i}" />
+          <span class="badge"><c:out value="${i}" /></span>
         </c:when>
         <c:otherwise>
-          <spring:url value="${queryUrl}" var="sizeUrl" htmlEscape="false">
+          <spring:url value="" var="sizeUrl">
             <spring:param name="page" value="1" />
             <spring:param name="size" value="${i}" />
           </spring:url>
@@ -50,8 +50,10 @@
     </c:forEach>
     <c:out value="| " />
 
+	<ul class="pager">
+	 <li>
     <c:if test="${page ne 1}">
-      <spring:url value="${queryUrl}" var="first" htmlEscape="false">
+      <spring:url value="" var="first">
         <spring:param name="page" value="1" />
         <spring:param name="size" value="${size}" />
       </spring:url>
@@ -61,8 +63,11 @@
         <img alt="${fn:escapeXml(first_label)}" src="${first_image_url}" />
       </a>
     </c:if>
+    </li>
+    
+    <li>
     <c:if test="${page gt 1}">
-      <spring:url value="${queryUrl}" var="previous" htmlEscape="false">
+      <spring:url value="" var="previous">
         <spring:param name="page" value="${page - 1}" />
         <spring:param name="size" value="${size}" />
       </spring:url>
@@ -72,11 +77,15 @@
         <img alt="${fn:escapeXml(previous_label)}" src="${previous_image_url}" />
       </a>
     </c:if>
+    </li>
+    
     <c:out value=" " />
     <spring:message code="list_page" arguments="${page},${maxPages}" argumentSeparator="," />
     <c:out value=" " />
+    
+    <li>
     <c:if test="${page lt maxPages}">
-      <spring:url value="${queryUrl}" var="next" htmlEscape="false">
+      <spring:url value="" var="next">
         <spring:param name="page" value="${page + 1}" />
         <spring:param name="size" value="${size}" />
       </spring:url>
@@ -86,8 +95,11 @@
         <img alt="${fn:escapeXml(next_label)}" src="${next_image_url}" />
       </a>
     </c:if>
+    </li>
+    
+    <li>
     <c:if test="${page ne maxPages}">
-      <spring:url value="${queryUrl}" var="last" htmlEscape="false">
+      <spring:url value="" var="last">
         <spring:param name="page" value="${maxPages}" />
         <spring:param name="size" value="${size}" />
       </spring:url>
@@ -97,8 +109,7 @@
         <img alt="${fn:escapeXml(last_label)}" src="${last_image_url}" />
       </a>
     </c:if>
+    </li>
+    </ul>
   </c:if>
-  
-  </c:if>
-
 </jsp:root>
