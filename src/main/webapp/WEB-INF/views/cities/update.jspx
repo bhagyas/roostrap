@@ -2,9 +2,9 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_com_intera_roostrap_domain_City" modelAttribute="city" path="/cities" versionField="Version" z="user-managed">
+    <form:update id="fu_com_intera_roostrap_domain_City" modelAttribute="city" path="/cities" versionField="Version" z="aKNycmyXeGx5462vbtRTqdXOEfI=">
         <field:input field="name" id="c_com_intera_roostrap_domain_City_name" required="true" z="L89ysoqnELplN/FpETa3/UX5pNM="/>
-        <field:select field="country" id="c_com_intera_roostrap_domain_City_country" itemValue="id" items="${countries}" path="/countries" z="tPmtGKxBrsuk1CwEqjSAEfRrGTc="/>
         <field:checkbox field="isActive" id="c_com_intera_roostrap_domain_City_isActive" z="VLXluTxdxbMvpbkBtBrzbrhuj+U="/>
+        <field:select field="country" id="c_com_intera_roostrap_domain_City_country" itemValue="id" items="${countries}" path="/countries" z="+6paVbO80fgeSVdy3eLeMOtVD2M="/>
     </form:update>
 </div>

@@ -12,8 +12,7 @@
     
 
     <!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources -->
-    <!-- cache period set to 0 for fixing a bug when running locally with AppEngine SDK -->
-    <mvc:resources location="/, classpath:/META-INF/web-resources/" mapping="/resources/**" cache-period="0"/>
+    <mvc:resources location="/, classpath:/META-INF/web-resources/" mapping="/resources/**"/>
 
     <!-- Allows for mapping the DispatcherServlet to "/" by forwarding static resource 
     requests to the container's default Servlet -->
@@ -43,7 +42,7 @@
     <bean class="org.springframework.ui.context.support.ResourceBundleThemeSource" id="themeSource"/>
 
     <!-- Store preferred theme configuration in a cookie -->
-    <bean class="org.springframework.web.servlet.theme.CookieThemeResolver" id="themeResolver" p:cookieName="theme" p:defaultThemeName="roostrap"/>
+    <bean class="org.springframework.web.servlet.theme.CookieThemeResolver" id="themeResolver" p:cookieName="theme" p:defaultThemeName="standard"/>
 
     <!-- This bean resolves specific types of exceptions to corresponding logical - view names for error views. 
     The default behaviour of DispatcherServlet - is to propagate all exceptions to the servlet 

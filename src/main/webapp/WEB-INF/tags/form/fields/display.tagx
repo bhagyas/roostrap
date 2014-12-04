@@ -20,18 +20,12 @@
       <c:set value="MM/dd/yyyy" var="dateTimePattern" />
     </c:if>
 
-	<dl class="dl-horizontal">
     <div id="_${fn:escapeXml(id)}_id">
-      <dt><label for="_${fn:escapeXml(field)}_id">
-      
-      
+      <label for="_${fn:escapeXml(field)}_id">
         <c:out value="${label}" />
         :
-     
-      
-       </label></dt>
-      <dd>
-      
+      </label>
+      <div class="box" id="_${fn:escapeXml(id)}_${fn:escapeXml(field)}_id">
         <c:choose>
           <c:when test="${date}">
             <spring:escapeBody>
@@ -47,9 +41,8 @@
             <spring:eval expression="object[field]" />
           </c:otherwise>
         </c:choose>
-        
-      </dd>
+      </div>
     </div>
-    </dl>
+    <br />
   </c:if>
 </jsp:root>

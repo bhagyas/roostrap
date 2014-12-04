@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_intera_roostrap_domain_City" items="${cities}" z="49Hbm4DSDxnauobiKEYNHuHmfn0=">
-        <table:table data="${cities}" id="l_com_intera_roostrap_domain_City" path="/cities" z="user-managed">
+        <table:table data="${cities}" id="l_com_intera_roostrap_domain_City" path="/cities" z="XWmTtTgMZ+keH36UQy/MSInv+84=">
             <table:column id="c_com_intera_roostrap_domain_City_name" property="name" z="5hmq0JjH9owY7I7G1+LLlztEJDM="/>
             <table:column id="c_com_intera_roostrap_domain_City_isActive" property="isActive" z="XI5ou4332NWLZ/OMJGhVTWcscTY="/>
             <table:column id="c_com_intera_roostrap_domain_City_country" property="country" z="iykGm9CYR495euhVWvV4uN7QFJQ="/>
