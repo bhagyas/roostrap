@@ -16,11 +16,8 @@
       <c:set var="size" value="10" />
     </c:if>
 
-<c:if test="${maxPages gt 1}">
-
     <spring:message code="list_size" var="list_size" htmlEscape="false" />
     <c:out value="${list_size} " />
-
 
 	<spring:url value="" var="queryUrl">
 		<c:forEach items="${paramValues}" var="p">
@@ -31,8 +28,6 @@
 			</c:if>
 		</c:forEach>
 	</spring:url>
-
-
     <c:forEach var="i" begin="5" end="25" step="5">
       <c:choose>
         <c:when test="${size == i}">
