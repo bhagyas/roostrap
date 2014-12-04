@@ -2,10 +2,10 @@
 <div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:create id="fc_com_intera_roostrap_domain_City" modelAttribute="city" path="/cities" render="${empty dependencies}" z="h5uvi0FnPgjcBgfooGvp0CsWMcU=">
+    <form:create id="fc_com_intera_roostrap_domain_City" modelAttribute="city" path="/cities" render="${empty dependencies}" z="user-managed">
         <field:input field="name" id="c_com_intera_roostrap_domain_City_name" required="true" z="L89ysoqnELplN/FpETa3/UX5pNM="/>
+        <field:select field="country" id="c_com_intera_roostrap_domain_City_country" itemValue="id" items="${countries}" path="/countries" z="tPmtGKxBrsuk1CwEqjSAEfRrGTc="/>
         <field:checkbox field="isActive" id="c_com_intera_roostrap_domain_City_isActive" z="VLXluTxdxbMvpbkBtBrzbrhuj+U="/>
-        <field:select field="country" id="c_com_intera_roostrap_domain_City_country" itemValue="id" items="${countries}" path="/countries" z="+6paVbO80fgeSVdy3eLeMOtVD2M="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_intera_roostrap_domain_City" render="${not empty dependencies}" z="hDgCWJkGql5m5J4SVa8wXvCktNY="/>
 </div>
