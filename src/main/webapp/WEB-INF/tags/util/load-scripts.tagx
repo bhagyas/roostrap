@@ -26,4 +26,12 @@
   <script src="${spring_dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script language="JavaScript" type="text/javascript">dojo.require("dojo.parser");</script>
 
+
+  <spring:url value="/resources/semantic.css" var="semantic_css_url" />
+  <link rel="stylesheet" type="text/css" href="${semantic_css_url}"></link>
+
+  <spring:url value="/resources/semantic.js" var="semantic_js_url" />
+  <script src="${semantic_js_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+
+
 </jsp:root>
