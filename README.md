@@ -64,6 +64,9 @@ If you are running on Hypersonic and Hibernate, you have to change the following
 
 Update History
 --------
+**4 December 2014**
+ - Updated Spring Roo to version 1.3.0-RELEASE
+
 **8 May 2014**
  - Updated Google AppEngine SDK version to 1.9.3 (released 28 April 2014)
 
