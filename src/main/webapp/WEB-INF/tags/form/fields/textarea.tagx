@@ -31,7 +31,7 @@
     </c:set>
 
     <script type="text/javascript">dojo.require("dijit.form.SimpleTextarea");</script>
-    <div id="_${fn:escapeXml(id)}_id">
+    <div id="_${fn:escapeXml(id)}_id" class="field">
       <label for="_${sec_field}_id">
         <c:out value="${fn:escapeXml(label)}" />
         :

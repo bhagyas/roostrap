@@ -6,6 +6,8 @@
   <spring:url var="home" value="/" />
   <spring:message code="button_home" var="home_label" htmlEscape="false" />
   <a href="${home}" name="${fn:escapeXml(home_label)}" title="${fn:escapeXml(home_label)}">
-    <img src="${banner}" />
+    <!--<img src="${banner}" />-->
+    ${fn:escapeXml(home_label)}
+    <div class="ui header large">${fn:escapeXml(home_label)}</div>
   </a>
 </div> 

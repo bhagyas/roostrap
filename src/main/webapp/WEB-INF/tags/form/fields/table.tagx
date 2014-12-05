@@ -44,7 +44,7 @@
     
     <spring:eval var="colCounter" expression="1" />
 
-    <table>
+    <table class="ui table">
       <thead>
         <tr>
           <c:forTokens items="${columnLabels}" delims="${'&#9999;'}" var="columnHeading" varStatus="num">

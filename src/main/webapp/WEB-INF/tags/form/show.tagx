@@ -42,8 +42,8 @@
       <c:choose>
         <c:when test="${not empty object}">
           <jsp:doBody />
-          <div class="quicklinks">
-            <span>
+          <div class="quicklinks ui buttons">
+            <span class="ui button">
               <c:if test="${delete}">
                 <spring:url value="${path}/${itemId}" var="delete_form_url" />
                 <spring:url value="/resources/images/delete.png" var="delete_image_url" />
@@ -54,11 +54,11 @@
                       <spring:message code="entity_delete_confirm" />
                     </spring:escapeBody>
                   </c:set>
-                  <input alt="${fn:escapeXml(delete_label)}" class="image" src="${delete_image_url}" title="${fn:escapeXml(delete_label)}" type="image" value="${fn:escapeXml(delete_label)}" onclick="return confirm('${fn:escapeXml(delete_confirm_msg)}');" />
+                  <input alt="${fn:escapeXml(delete_label)}" class="red ui button" src="${delete_image_url}" title="${fn:escapeXml(delete_label)}" type="image" value="${fn:escapeXml(delete_label)}" onclick="return confirm('${fn:escapeXml(delete_confirm_msg)}');" />
                 </form:form>
               </c:if>
             </span>
-            <span>
+            <span class="ui button">
               <c:if test="${update}">
                 <spring:url value="${path}/${itemId}" var="update_form_url">
                   <spring:param name="form" />
@@ -70,7 +70,7 @@
                 </a>
               </c:if>
             </span>
-            <span>
+            <span class="ui button">
               <c:if test="${create}">
                 <spring:url value="${path}" var="create_form_url">
                   <spring:param name="form" />
@@ -82,7 +82,7 @@
                 </a>
               </c:if>
             </span>
-            <span>
+            <span class="ui button">
               <c:if test="${list}">
                 <spring:url value="${path}" var="list_form_url" />
                 <spring:url value="/resources/images/list.png" var="list_image_url" />

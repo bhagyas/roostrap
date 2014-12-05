@@ -18,12 +18,12 @@
       <spring:message code="${messageCode}" var="label" arguments="${label}" htmlEscape="false" />
     </c:if>
 
-    <li id="${fn:escapeXml(id)}">
+    <!--<li class="item" id="${fn:escapeXml(id)}">-->
       <spring:url value="${url}" var="menu_item_url"/>
-      <a href="${menu_item_url}" title="${fn:escapeXml(label)}">
+      <a href="${menu_item_url}" title="${fn:escapeXml(label)}" class="item">
         <c:out value="${label}"/>
       </a>
-    </li>
+    <!--</li>-->
 
   </c:if>
 </jsp:root>

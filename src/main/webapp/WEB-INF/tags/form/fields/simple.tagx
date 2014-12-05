@@ -16,7 +16,7 @@
       <spring:message code="label_${fn:toLowerCase(fn:substringAfter(id,'_'))}" var="label" htmlEscape="false" />
     </c:if>
 
-    <div id="_${fn:escapeXml(id)}_id">
+    <div id="_${fn:escapeXml(id)}_id" class="inline field">
       <label for="_${fn:escapeXml(field)}_id">
         <c:out value="${label}" />
         :

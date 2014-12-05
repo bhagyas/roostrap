@@ -20,7 +20,7 @@
       <c:set value="MM/dd/yyyy" var="dateTimePattern" />
     </c:if>
 
-    <div id="_${fn:escapeXml(id)}_id">
+    <div id="_${fn:escapeXml(id)}_id" class="field">
       <label for="_${fn:escapeXml(field)}_id">
         <c:out value="${label}" />
         :

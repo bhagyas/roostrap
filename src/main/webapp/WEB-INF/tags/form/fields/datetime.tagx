@@ -33,7 +33,7 @@
     </c:if>
 
     <script type="text/javascript">dojo.require('dijit.form.DateTextBox')</script>
-    <div id="_${sec_id}_id">
+    <div id="_${sec_id}_id" class="inline field">
       <label for="_${sec_field}_id">
         <c:out value="${label}" />
         :

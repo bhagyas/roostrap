@@ -4,8 +4,7 @@
   <jsp:directive.attribute name="render" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Indicate if the contents of this tag and all enclosed tags should be rendered (default 'true')" />
 
   <c:if test="${empty render or render}">
-    <span>
-      <c:out value=" | " />
+    <span class="ui buttons">
       <spring:message code="global_theme" />
       <c:out value=": " />
       <spring:url var="url_theme1" value="">
@@ -18,8 +17,8 @@
         </c:if>
       </spring:url>
       <spring:message code="global_theme_standard" var="theme_standard" htmlEscape="false" />
-      <a href="${url_theme1}" title="${fn:escapeXml(theme_standard)}">${fn:escapeXml(theme_standard)}</a>
       <c:out value=" | " />
+      <a class="" href="${url_theme1}" title="${fn:escapeXml(theme_standard)}">${fn:escapeXml(theme_standard)}</a>
       <spring:url var="url_theme2" value="">
         <spring:param name="theme" value="alt" />
         <c:if test="${not empty param.page}">
@@ -30,8 +29,8 @@
         </c:if>
       </spring:url>
       <spring:message code="global_theme_alt" var="theme_alt" htmlEscape="false" />
-      <a href="${url_theme2}" title="${fn:escapeXml(theme_alt)}">${fn:escapeXml(theme_alt)}</a>
       <c:out value=" | " />
+      <a class="" href="${url_theme2}" title="${fn:escapeXml(theme_alt)}">${fn:escapeXml(theme_alt)}</a>
       <spring:url var="url_theme3" value="">
         <spring:param name="theme" value="semantic" />
         <c:if test="${not empty param.page}">
@@ -42,7 +41,8 @@
         </c:if>
       </spring:url>
       <spring:message code="global_theme_semantic" var="theme_semantic" htmlEscape="false" />
-      <a href="${url_theme3}" title="${fn:escapeXml(theme_semantic)}">${fn:escapeXml(theme_semantic)}</a>
+      <c:out value=" | " />
+      <a class="" href="${url_theme3}" title="${fn:escapeXml(theme_semantic)}">${fn:escapeXml(theme_semantic)}</a>
     </span>
   </c:if>
 </jsp:root>
